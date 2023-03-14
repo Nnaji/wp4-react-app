@@ -1,0 +1,105 @@
+body {
+    font-family: $font-family;
+    // font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    color: lighten($black, 10%);
+    min-width: $mobile-s-dw;
+    min-height: 100%;
+    line-height: $base-line-height;
+    letter-spacing: 0.01rem;
+    vertical-align: baseline;
+    background-color: $white;
+    $scale: $minor-second;
+    @include mq($laptop-xl-dw) {
+        // $scale: $major-second; //1.25 => 20px
+        // font-size: $base-font-size * $scale;
+    }
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+$scale: $major-second;
+$h6: $base-font-size * $scale;
+$h5: $h6 * $scale;
+$h4: $h5 * $scale;
+$h3: $h4 * $scale;
+$h2: $h3 * $scale;
+$h1: $h2 * $scale;
+h1 {
+    margin: 3rem 0 1.38rem;
+    font-size: $h5;
+    @include mq($tablet-dw) {
+        font-size: $h3;
+    }
+    @include mq($laptop-l-dw) {
+        font-size: $h2;
+    }
+    @include mq($laptop-xl-dw) {
+        font-size: $h1;
+    }
+}
+h2 {
+    margin: 3rem 0 1.38rem;
+    font-weight: 400;
+    font-size: $h4;
+    @include mq($tablet-dw) {
+        font-size: $h3;
+    }
+    @include mq($laptop-l-dw) {
+        font-size: $h2;
+    }
+    @include mq($laptop-xl-dw) {
+        font-size: $h1;
+    }
+}
+h3 {
+    margin: 3rem 0 1.38rem;
+    font-weight: 400;
+    font-size: $h5;
+    @include mq($tablet-dw) {
+        font-size: $h4;
+    }
+    @include mq($laptop-l-dw) {
+        font-size: $h3;
+    }
+    @include mq($laptop-xl-dw) {
+        font-size: $h2;
+    }
+}
+h4 {
+    margin: 3rem 0 1.38rem;
+    font-weight: 400;
+    font-size: $h5;
+    @include mq($tablet-dw) {
+        font-size: $h4;
+    }
+    @include mq($laptop-l-dw) {
+        font-size: $h3;
+    }
+}
+h4 {
+    margin: 3rem 0 1.38rem;
+    font-weight: 400;
+    font-size: $h5;
+    @include mq($tablet-dw) {
+        font-size: $h4;
+    }
+}
+h5 {
+    margin: 3rem 0 1.38rem;
+    font-weight: 400;
+    font-size: $h5;
+}
+
+small {
+    // $scale: $small;
+    // $base-font-size: 0.8rem;
+    @include fluid-type(
+        $base-font-size,
+        ($base-font-size / $scale),
+        $hd-dw,
+        $mobile-m-dw
+    );
+}

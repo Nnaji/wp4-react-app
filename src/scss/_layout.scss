@@ -1,0 +1,215 @@
+/*
+ *Layout Content
+ */
+.wrapper {
+    // @include bgimage('/src/images/dsxxl.jpg');
+    @include fluid-type(
+        $base-font-size,
+        ($base-font-size * $scale),
+        $hd-dw,
+        $tablet-dw
+    );
+    @include clearfix;
+    position: relative;
+    // background-image: $bst;
+    .container {
+        // @include clearfix;
+        width: 100%;
+        margin: auto;
+        padding: 0 0.5rem;
+        // @include mqa($mobile-m-dw) {
+        // padding: 0 0.5rem;
+        // }
+        @include makegrid(12, xs);
+        @include mqa($mobile-l-dw) {
+            padding: 0 0.5rem;
+            @include makegrid(12, sm);
+        }
+        @include mqa($tablet-dw) {
+            padding: 0 1rem;
+            // max-width: calc($tablet-dw - 6rem);
+            // margin: 0 auto;
+            @include makegrid(12, md);
+        }
+        @include mqa($laptop-l-dw) {
+            padding: 0 2rem;
+            // max-width: calc($laptop-l-dw - 6rem);
+            @include makegrid(12, l);
+        }
+        @include mqa($laptop-xl-dw) {
+            padding: 0 3rem;
+            // max-width: calc($laptop-xl-dw - 6rem);
+            @include makegrid(12, xl);
+        }
+        @include mqa($laptop-xxl-dw) {
+            padding: 0 3rem;
+            // max-width: calc($laptop-xxl-dw - 6rem);
+            @include makegrid(12, xxl);
+        }
+        @include mqa($hd-dw) {
+            padding: 0 3rem;
+            // max-width: calc($hd-dw - 6rem);
+            @include makegrid(12, xxxl);
+        }
+    }
+    display: grid;
+    // grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'lyt-header lyt-header lyt-header'
+        'lyt-main lyt-main lyt-main'
+        'lyt-content lyt-content lyt-content'
+        'lyt-services lyt-services lyt-services'
+        'lyt-about lyt-about lyt-about'
+        'lyt-footer lyt-footer lyt-footer';
+    @include mq($tablet-dw) {
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'lyt-header lyt-header lyt-header'
+            'lyt-main lyt-main lyt-main'
+            'lyt-content lyt-content lyt-content'
+            'lyt-services lyt-services lyt-services'
+            'lyt-about lyt-about lyt-about'
+            'lyt-footer lyt-footer lyt-footer';
+    }
+    // grid-gap: 0.2rem;
+    .lyt-header {
+        grid-area: lyt-header;
+        background-color: transparent;
+        // background-color: $default-color;
+        background-image: linear-gradient(
+            to bottom,
+            rgba($primary-color, 1),
+            rgba($primary-color, 0.9)
+        );
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%),
+            inset 0 -1px 0 rgb(0 0 0 / 15%); // padiing: 5rem 0;
+        .header-section {
+            // padiing: 5rem 0;
+            display: flex;
+            flex-direction: row;
+            flex: 0 0 auto;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+            .brand-logo {
+                width: 150px;
+                // padding: 3rem;
+            }
+        }
+
+        // padding: 0;
+    }
+    .lyt-main {
+        grid-area: lyt-main;
+        // @include clearfix;
+        // height: 150px;
+        height: auto;
+        // height: 50vh;
+        @include mqa($mobile-m-dw) {
+            // height: 80vh;
+        }
+        @include mqa($tablet-dw) {
+            height: 100vh;
+        }
+        .hero-section {
+            text-align: center !important;
+            // margin: 0 auto;
+            // flex: 0 0 auto;
+            h1 {
+                color: $primary-color;
+                font-weight: 500 !important;
+                font-family: $header;
+            }
+
+            #br-logo {
+                padding-top: 50px;
+                @include mqa($mobile-m-dw) {
+                    padding-top: 100px;
+                }
+                @include mqa($tablet-dw) {
+                    padding-top: 250px;
+                    // width: 100%;
+                    // // height: 100%;
+                    // // margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    .lyt-content {
+        grid-area: lyt-content;
+        // background-color: $secondary-color;
+        // background-image: $gradient-top;
+        // background-image: $gradient-top;
+        background-image: linear-gradient(
+            to bottom,
+            rgba($secondary-color, 1),
+            rgba($secondary-color, 0.9)
+        );
+        // color: $base-color;
+        color: $primary-color;
+        padding: 3rem 0;
+    }
+    .lyt-services {
+        grid-area: lyt-services;
+        // background-color: $white;
+        background-image: linear-gradient(
+            to bottom,
+            rgba($primary-color, 1),
+            rgba($primary-color, 0.9)
+        );
+        color: $base-color;
+        padding: 3rem 0;
+    }
+    .lyt-about {
+        grid-area: lyt-about;
+        background-image: $bst;
+        // background-color: $white;
+        color: $primary-color;
+        padding: 3rem 0;
+    }
+    .lyt-footer {
+        grid-area: lyt-footer;
+        // background-color: $black;
+        // background-color: $secondary-color;
+        // background-color: $white;
+        // background-image: url('/src/images/Background.jpg');
+        background-image: linear-gradient(
+            to bottom,
+            rgba($secondary-color, 1),
+            rgba($secondary-color, 0.95)
+        );
+        color: $primary-color;
+        // padding: 3rem 0;
+        // padding-top: 0.5rem;
+        // position: absolute;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        i {
+            color: $primary-color;
+        }
+
+        .copy-right {
+            background-color: transparent;
+            background-image: linear-gradient(
+                to bottom,
+                rgba($primary-color, 1),
+                rgba($primary-color, 0.95)
+            );
+            box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%),
+                inset 0 -1px 0 rgb(0 0 0 / 15%);
+            // color: $default-color;
+            color: $base-color;
+            font-weight: 300;
+            text-align: center;
+            padding: 0.5rem 0;
+            // padding-top: 1rem;
+            // position: absolute;
+            // right: 0;
+            // bottom: 0;
+            // left: 0;
+        }
+    }
+}

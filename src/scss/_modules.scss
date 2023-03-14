@@ -1,0 +1,40 @@
+.limit-width {
+    margin: auto;
+    max-width: $tablet-dw;
+    @include mqa($laptop-l-dw) {
+        max-width: 80%;
+    }
+
+    @include mqa($laptop-xl-dw) {
+        max-width: 80%;
+    }
+}
+.ta-c {
+    text-align: center;
+    padding: 1rem;
+}
+
+pd-15 {
+    padiding: 1rem;
+}
+.lead {
+    font-weight: 400;
+    font-size: calc(1.275rem + 0.3vw);
+    // color: ;
+}
+
+i {
+    color: $base-color;
+}
+
+.mrg-l5p {
+    margin-left: 5px;
+}
+.mrg-r5p {
+    margin-right: 5px;
+}
+
+.mrg-5p {
+    margin-right: 15px;
+}
+//1140px;

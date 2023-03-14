@@ -1,0 +1,161 @@
+/*
+ *VARIABLES
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Fonts Variables*/
+$header: 'Roboto', sans-serif;
+$sub-header: 'Lora', serif;
+$body-text: 'Lato', sans-serif;
+$font-family: $body-text, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    $sub-header, $header, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$base-font-size: 1rem;
+$base-line-height: 1.75;
+$base-font-weight: 300;
+
+$small: 0.75; //0.75 => 12px;
+$minor-second: 1.125; //1.125 => 18px;
+$major-second: 1.25; //1.25 => 20px
+$minor-third: 1.357; //1.357 => 22px
+$major-third: 1.5; //1.5 => 24px
+$perfect-fourth: 1.625; //1.625 => 26px;
+
+$mobile-s-dw: 0; //320px;
+$mobile-m-dw: 36rem; //576px;
+$mobile-l-dw: 48rem; //768px;
+$tablet-dw: 62rem; //992px;
+$laptop-l-dw: 64rem; //1024px;
+$laptop-xl-dw: 75rem; //1200px;
+$laptop-xxl-dw: 87.5rem; //1400px;
+$hd-dw: 160rem; //2560px;
+
+/* Min-Width*/
+
+/* Color Variables*/
+/* SCSS HEX */
+$blue-green-color-wheel: #064e40ff !default;
+$green-yellow: #b8fb3cff !default;
+$gray-x-11-gray: #bebebeff !default;
+$midnight-blue: #03045eff !default;
+$white: #ffffffff !default;
+$black: #000000ff !default;
+
+/* CSS HEX */
+// --blue-green-color-wheel: #064e40ff;
+// --green-yellow: #b8fb3cff;
+// --gray-x-11-gray: #bebebeff;
+// --midnight-blue: #03045eff;
+//
+// [> CSS HSL <]
+// --blue-green-color-wheel: hsla(168, 86%, 16%, 1);
+// --green-yellow: hsla(81, 96%, 61%, 1);
+// --gray-x-11-gray: hsla(0, 0%, 75%, 1);
+// --midnight-blue: hsla(239, 94%, 19%, 1);
+//
+// [> SCSS HSL <]
+// $blue-green-color-wheel: hsla(168, 86%, 16%, 1);
+// $green-yellow: hsla(81, 96%, 61%, 1);
+// $gray-x-11-gray: hsla(0, 0%, 75%, 1);
+// $midnight-blue: hsla(239, 94%, 19%, 1);
+//
+// [> SCSS RGB <]
+// $blue-green-color-wheel: rgba(6, 78, 64, 1);
+// $green-yellow: rgba(184, 251, 60, 1);
+// $gray-x-11-gray: rgba(190, 190, 190, 1);
+// $midnight-blue: rgba(3, 4, 94, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(
+    0deg,
+    rgba(#064e40ff, 1),
+    rgba(#b8fb3cff, 1) rgba(#bebebeff, 0.5) rgba(#03045eff, 0.5)
+);
+$gradient-right: linear-gradient(
+    90deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-bottom: linear-gradient(
+    180deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-left: linear-gradient(
+    270deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-top-right: linear-gradient(
+    45deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-bottom-right: linear-gradient(
+    135deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-top-left: linear-gradient(
+    225deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-bottom-left: linear-gradient(
+    315deg,
+    #064e40ff,
+    #b8fb3cff,
+    #bebebeff,
+    #03045eff
+);
+$gradient-radial: radial-gradient(#064e40ff, #b8fb3cff, #bebebeff, #03045eff);
+
+/* Color Variables Assignment*/
+$primary-color: $midnight-blue;
+$secondary-color: $green-yellow;
+$default-color: $blue-green-color-wheel;
+$base-color: $gray-x-11-gray;
+
+// $xs-dw: 48rem; // 768px;
+// $sm-dw: 60rem; // 960px;
+// $md-dw: 80rem; // 1280px;
+// $lg-dw: 120rem; //1920px;
+// $xl-dw: 83.75rem; // 1340px;
+// $xl-dw-max: 78.75rem; // 1260px;
+// $xxl-dw: 240rem; //3840px;
+
+$bst: linear-gradient(180deg, rgba($default-color, 0.01), rgba($white, 1) 85%),
+    radial-gradient(
+        ellipse at top left,
+        rgba($primary-color, 0.5),
+        transparent 50%
+    ),
+    radial-gradient(
+        ellipse at top right,
+        rgba($primary-color, 0.5),
+        transparent 50%
+    ),
+    radial-gradient(
+        ellipse at center right,
+        rgba($secondary-color, 0.5),
+        transparent 50%
+    ),
+    radial-gradient(
+        ellipse at center left,
+        rgba($base-color, 0.5),
+        transparent 50%
+    );
